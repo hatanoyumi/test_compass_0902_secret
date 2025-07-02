@@ -2,7 +2,7 @@
 import Layout from "@layouts/Layout.astro";
 import '@styles/main.scss';
 
-const className = "index";
+const className = "goods";
 ---
 
 <Layout className={className}>
@@ -22,92 +22,65 @@ const className = "index";
     </div>
   </div>
   <main>
-    <div class="hero-sec">
-      <h1 class="ttl">＃COMPASS SECRET PARTY / #コンパスの音楽を体感せよ!</h1>
-      <p class="msg">DJ、dance、band、goods #コンパスがお送りするmusicで溢れる空間を思う存分楽しもう！</p>
+    <div class="sub-head">
+      <p class="logo"><a href="./" class="sub-logo">＃COMPASS SECRET PARTY</a></p>
     </div>
 
-    <div class="date-sec">
-      <div class="date">
-        <p>ワンドリンク制</p>
-        <dl>
-          <dt>OSAKA 梅田 CLUB QUATTRO</dt>
-          <dd></dd>
-          <dt>NAGOYA 名古屋 ReNY limited</dt>
-          <dd>10.19 SAT OPEN 14:00 / START 14:30</dd>
-          <dt>TOKYO SOUND MUSEUM VISION</dt>
-          <dd>11.3 SUN OPEN 14:00 / START 14:30</dd>
-        </dl>
-      </div>
-    </div>
-
-    <section class="act-01">
-      <div class="act">
-        <h2 class="ttl">OSAKA</h2>
-        <dl class="cast-list">
-          <div>
-            <dt class="ttl-band">BAND</dt>
-            <dd><a href="https://twitter.com/kairiki_bear" target="_blank"><img src="img/act1.jpg" alt="" loading="lazy"></a>かいりきベア<i>（band ver.）</i></dd>
-          </div>
-          <div>
-            <dt class="ttl-dj">DJ</dt>
-            <dd><a href="https://twitter.com/yasuhiro_vanq" target="_blank"><img src="img/act2.jpg" alt="" loading="lazy"></a>YASUHIRO（康寛）</dd>
-          </div>
-          <div>
-            <dt class="ttl-dance">DANCE</dt>
-            <dd><a href="https://twitter.com/drag_on_dragon" target="_blank"><img src="img/act3.jpg" alt="" loading="lazy"></a>DRAGON<i>（RAB）</i></dd>
-            <dd><a href="https://twitter.com/RAB_nesu45" target="_blank"><img src="img/act4.jpg" alt="" loading="lazy"></a>ネス</dd>
-          </div>
-        </dl>
-      </div>
-    </section>
-
-    <section class="act-02">
-      <div class="act">
-        <h2 class="ttl">NAGOYA</h2>
-        <dl class="cast-list">
-          <div>
-            <dt class="ttl-band">BAND</dt>
-            <dd><a href="https://twitter.com/kairiki_bear" target="_blank"><img src="img/act1.jpg" alt="" loading="lazy"></a>かいりきベア<i>（band ver.）</i></dd>
-          </div>
-          <div>
-            <dt class="ttl-dj">DJ</dt>
-            <dd><a href="https://twitter.com/easypop_betti" target="_blank"><img src="img/act5.jpg" alt="" loading="lazy"></a>EasyPop</dd>
-          </div>
-          <div>
-            <dt class="ttl-dance">DANCE</dt>
-            <dd><a href="https://twitter.com/panpaooo" target="_blank"><img src="img/act10.jpg" alt="" loading="lazy"></a>いりぽん先生</dd>
-            <dd><a href="https://twitter.com/ri_ri_ri_5" target="_blank"><img src="img/act6.jpg" alt="" loading="lazy"></a>りりり</dd>
-          </div>
-        </dl>
-      </div>
-    </section>
-
-    <section class="act-03">
-      <div class="act">
-        <h2 class="ttl">TOKYO</h2>
-        <dl class="cast-list">
-          <div>
-            <dt class="ttl-band">BAND</dt>
-            <dd><a href="https://twitter.com/kairiki_bear" target="_blank"><img src="img/act1.jpg" alt="" loading="lazy"></a>かいりきベア<i>（band ver.）</i></dd>
-          </div>
-          <div>
-            <dt class="ttl-dj">DJ</dt>
-            <dd><a href="https://twitter.com/8_Prince" target="_blank"><img src="img/act7.jpg" alt="" loading="lazy"></a>八王子P</dd>
-          </div>
-          <div>
-            <dt class="ttl-dance">DANCE</dt>
-            <dd><a href="https://twitter.com/jjmiume" target="_blank"><img src="img/act8.jpg" alt="" loading="lazy"></a>みうめ<i>COJIRASE THE TRIP</i></dd>
-            <dd><a href="https://twitter.com/mattan_cojirase" target="_blank"><img src="img/act9.jpg" alt="" loading="lazy"></a>まったん<i>COJIRASE THE TRIP</i></dd>
-          </div>
-        </dl>
-      </div>
-    </section>
-
-    <section class="goods-sec">
-      <h2 class="ttl">GOODS</h2>
+    <div class="goods-sec2">
+      <h1 class="ttl1">GOODS</h1>
+      <p class="txt1">当日の会場でもお配りしますが、可能な方はリンクよりオーダーシートをダウンロード・印刷していただき、あらかじめ記入したものを当日お渡しいただくと、スムーズにお買い上げいただけます。<br>
+        グッズのご購入にはチケットが必要となります。</p>
+      <p class="btn1"><a href="img/ordersheet.pdf" target="_blank" class="btn-sheet">オーダーシート</a></p>
       <ul class="item-list">
-        <li class="op">
+        <li>
+          <img src="img/goods_1.jpg" alt="" loading="lazy">
+          <p class="name">連結アクリル<br>キーホルダー</p>
+          <p class="option">（ver.Party-A）</p>
+          <div class="more">
+            <p class="price">800円<i>（税込）</i></p>
+          </div>
+        </li>
+        <li>
+          <img src="img/goods_2.jpg" alt="" loading="lazy">
+          <p class="name">連結アクリル<br>キーホルダー</p>
+          <p class="option">（ver.Party-B）</p>
+          <div class="more">
+            <p class="price">800円<i>（税込）</i></p>
+          </div>
+        </li>
+        <li>
+          <img src="img/goods_3.jpg" alt="" loading="lazy">
+          <p class="name">連結アクリル<br>キーホルダー</p>
+          <p class="option">（ver.Party-C）</p>
+          <div class="more">
+            <p class="price">800円<i>（税込）</i></p>
+          </div>
+        </li>
+        <li>
+          <img src="img/goods_4.jpg" alt="" loading="lazy">
+          <p class="name">缶バッジ</p>
+          <p class="option">（ver.Party-A）</p>
+          <div class="more">
+            <p class="price">500円<i>（税込）</i></p>
+          </div>
+        </li>
+        <li>
+          <img src="img/goods_5.jpg" alt="" loading="lazy">
+          <p class="name">缶バッジ</p>
+          <p class="option">（ver.Party-B）</p>
+          <div class="more">
+            <p class="price">500円<i>（税込）</i></p>
+          </div>
+        </li>
+        <li>
+          <img src="img/goods_6.jpg" alt="" loading="lazy">
+          <p class="name">缶バッジ</p>
+          <p class="option">（ver.Party-C）</p>
+          <div class="more">
+            <p class="price">500円<i>（税込）</i></p>
+          </div>
+        </li>
+        <li>
           <img src="img/goods_7.jpg" alt="" loading="lazy">
           <p class="name">Voidollメガネ</p>
           <p class="option">（nunettes）</p>
@@ -115,9 +88,25 @@ const className = "index";
             <p class="price">3,500円<i>（税込）</i></p>
           </div>
         </li>
-        <li class="op">
+        <li>
+          <img src="img/goods_8.jpg" alt="" loading="lazy">
+          <p class="name">コクリコットメガネ</p>
+          <p class="option">（nunettes）</p>
+          <div class="more">
+            <p class="price">3,500円<i>（税込）</i></p>
+          </div>
+        </li>
+        <li>
           <img src="img/goods_9.jpg" alt="" loading="lazy">
           <p class="name">13 マスク</p>
+          <p class="option">（gonoturn）</p>
+          <div class="more">
+            <p class="price">2,800円<i>（税込）</i></p>
+          </div>
+        </li>
+        <li>
+          <img src="img/goods_10.jpg" alt="" loading="lazy">
+          <p class="name">グスタフ マスク</p>
           <p class="option">（gonoturn）</p>
           <div class="more">
             <p class="price">2,800円<i>（税込）</i></p>
@@ -131,6 +120,20 @@ const className = "index";
           </div>
         </li>
         <li>
+          <img src="img/goods_12.jpg" alt="" loading="lazy">
+          <p class="name">#コンパス<br>ペンライト＋１</p>
+          <div class="more">
+            <p class="price">3,500円<i>（税込）</i></p>
+          </div>
+        </li>
+        <li>
+          <img src="img/goods_13.jpg" alt="" loading="lazy">
+          <p class="name">アイコン<br>マフラータオルⅡ</p>
+          <div class="more">
+            <p class="price">1,800円<i>（税込）</i></p>
+          </div>
+        </li>
+        <li>
           <img src="img/goods_14.jpg" alt="" loading="lazy">
           <p class="name">イベント<br>ホテルキーホルダー</p>
           <div class="more">
@@ -138,48 +141,47 @@ const className = "index";
           </div>
         </li>
       </ul>
-      <p class="btn"><a href="goods">グッズ一覧はこちら</a></p>
+
+      <ul class="bnr-list">
+        <li><img src="img/bnr_postcard.png" alt=""></li>
+        <li><a href="https://mall.nhn-playart.com/new/2019-10-16-150612.html" target="_blank"><img src="img/bnr_vv.png" alt=""></a></li>
+      </ul>
+    </div>
+
+    <section class="ordeinfo_sec">
+      <h2 class="ttl1">オーダー方法</h2>
+      <p class="txt1">当日のグッズ販売はオーダーシート記入で行います。<br>
+        当日の会場でもお配りしますが、可能な方はリンクよりオーダーシートをダウンロード・印刷していただき、あらかじめ記入したものを当日お渡しいただくと、スムーズにお買い上げいただけます。</p>
+      <ol class="order-flow">
+        <li>
+          <figure class="img"><img src="img/koma1.png" alt="" loading="lazy"></figure>
+          <p class="txt">PC又はスマホからオーダーシートをダウンロードしてください。</p>
+        </li>
+        <li>
+          <figure class="img"><img src="img/koma2.png" alt="" loading="lazy"></figure>
+          <p class="txt">オーダーシートを印刷してください。コンビニでも印刷できます。</p>
+        </li>
+        <li>
+          <figure class="img"><img src="img/koma3.png" alt="" loading="lazy"></figure>
+          <p class="txt">ご購入希望の商品の枠内に注文数をご記入ください。</p>
+        </li>
+        <li>
+          <figure class="img"><img src="img/koma4.png" alt="" loading="lazy"></figure>
+          <p class="txt">イベント当日に物販販売員にお渡しください。</p>
+        </li>
+      </ol>
+      <p class="note">多くのお客様にグッズをご購入いただくため、ご協力宜しくお願い致します。</p>
+      <p class="btn1"><a href="img/ordersheet.pdf" target="_blank" class="btn-sheet">オーダーシート</a></p>
     </section>
 
-    <section class="info-sec">
-      <h2 class="ttl1">ACCESS</h2>
-      <dl class="map-list">
-        <div class="osaka">
-          <dt>OSAKA</dt>
-          <dd>
-            <p class="map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13120.54465647193!2d135.5022437!3d34.7017454!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x927975409480db9!2z5qKF55SwQ0xVQiBRVUFUVFJP!5e0!3m2!1sja!2sjp!4v1565329841185!5m2!1sja!2sjp" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
-            </p>
-            <h3 class="name">梅田 CLUB QUATTRO</h3>
-            <p class="add">〒530-0051<br>大阪市北区太融寺町8-17 プラザ梅田10F</p>
-          </dd>
-        </div>
-        <div class="nagoya">
-          <dt>NAGOYA</dt>
-          <dd>
-            <p class="map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13046.495231946283!2d136.9082345!3d35.1660017!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa9007845de5a6a41!2sNAGOYA+ReNY+limited!5e0!3m2!1sja!2sjp!4v1565329930469!5m2!1sja!2sjp" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
-            </p>
-            <h3 class="name">名古屋ReNY limited</h3>
-            <p class="add">〒460-0008<br>愛知県名古屋市中区栄3-15-20 エンゼルビル B1・B2</p>
-          </dd>
-        </div>
-        <div class="tokyo">
-          <dt>TOKYO</dt>
-          <dd>
-            <p class="map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12967.066007152605!2d139.697197!3d35.6581241!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x886559e4f6c8e6b1!2z5riL6LC344Gu44Kv44Op44OWIFNvdW5kIE11c2V1bSBWaXNpb24o44K144Km44Oz44OJIOODn-ODpeODvOOCuOOCouODoCDjg5Pjgrjjg6fjg7Mp!5e0!3m2!1sja!2sjp!4v1565329958253!5m2!1sja!2sjp" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
-            </p>
-            <h3 class="name">SOUND MUSEUM VISION</h3>
-            <p class="add">〒530-0051<br>東京都渋谷区道玄坂2-10-7 新大宗ビルB1F</p>
-          </dd>
-        </div>
-      </dl>
+    <section class="info-sec2">
 
       <h2 class="ttl2">TWITTER</h2>
       <div class="tw-widget">
         <a class="twitter-timeline" data-lang="ja" href="https://twitter.com/cps_niconico?ref_src=twsrc%5Etfw" width="100%" height="100%">Tweets by cps_niconico</a>
       </div>
+
+      <p class="bkbtn"><a href="./" class="btn-bkindex">トップに戻る</a></p>
     </section>
 
     <section class="notice-sec">
@@ -257,7 +259,6 @@ const className = "index";
 
   <div class="entry-bar">
     <a href="https://eplus.jp/compass-of/" target="_blank" class="btn">チケット購入はこちら</a>
-    <button class="js-btn2">&gt;&gt;&nbsp;大阪公演　開催延期のお知らせ&nbsp;&lt;&lt;</button>
   </div>
 
 </Layout>

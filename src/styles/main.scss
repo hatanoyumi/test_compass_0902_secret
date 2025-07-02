@@ -1,0 +1,1571 @@
+@charset "utf-8";
+
+@forward "_reset.scss"; // リセットcss
+// fontはお試しでfontsourceに変更（読み込みが早いらしい？→ビルドするとdistフォルダ内にfontが格納される。だから早い）
+// 注意）npm install @fontsource/noto-sans-jp が必要
+@forward '@fontsource/noto-sans-jp/400.css';
+@forward '@fontsource/noto-sans-jp/500.css';
+@forward '@fontsource/noto-sans-jp/700.css';
+@forward '@fontsource/noto-sans-jp/900.css';
+
+
+
+html {
+  padding-top: constant(safe-area-inset-top);
+  padding-right: constant(safe-area-inset-right);
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-left: constant(safe-area-inset-left);
+  // margin-top: 0 !important;
+}
+
+body {
+  font-family: 'Noto Sans JP', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+  color: #fff;
+  position: relative;
+  font-size: rate(20, $rateS);
+
+  // @media (min-width: $breakM) {
+  //   font-size: rate(20, $rateM);
+  // }
+
+
+  @media (min-width: $breakL) {
+    min-width: 824px;
+    font-size: 20px;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    // text-decoration: underline;
+    // color: #ff5035;
+  }
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.o-sp {
+  display: block;
+  @media (min-width: $breakM) {
+    display: none;
+  }
+  @media (min-width: $breakL) {
+    display: none;
+  }
+}
+
+.o-tab {
+  display: block;
+  @media (min-width: $breakL) {
+    display: none;
+  }
+}
+
+.o-pc {
+  display: none;
+  @media (min-width: $breakL) {
+    display: block;
+  }
+}
+
+.o-hide {
+  display: none !important;
+}
+
+
+body {
+  position: relative;
+  padding-bottom: helf(190px);
+
+  @media (min-width: $breakM) {
+    padding-bottom: 85px;
+  }
+
+  &.index {
+    background-image: url('/img/bg0913_1.jpg'), url('/img/bg0913_2.jpg'), url('/img/bg0913_3.jpg'), url('/img/bg0913_4.jpg');
+    background-repeat: no-repeat;
+    background-position: center 0, center helf(1520px), center helf(1520px + 1368px), center helf(1520px + 1368px + 1100px);
+    background-size: helf(2560px) auto;
+    background-color: #000;
+
+    // @media (min-width: $breakM) {
+    //   background-position: center 0, center top rate(3500, $rateM);
+    // }
+
+    @media (min-width: $breakM) {
+      background-position: center 0, center 1520px, center (1520px + 1368px), center (1520px + 1368px + 1100px);
+      background-size: auto;
+    }
+  }
+}
+
+#mq {
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+
+  @media (min-width: $breakM) {
+    display: none;
+  }
+}
+
+main {
+  width: 100%;
+}
+
+.hero-sec {
+  // padding-top: helf(64px);
+  padding-top: helf(1282px);
+
+  @media (min-width: $breakM) {
+    // padding-top: 64px;
+    padding-top: 1282px;
+  }
+
+  & > .ttl {
+    margin: 0 auto;
+    width: 100%;
+    font-size: 0;
+    color: transparent;
+  }
+
+  & > .msg {
+    margin: 0 auto;
+    background-image: url('/img/main_msg.png');
+    background-repeat: no-repeat;
+    background-position: center 0;
+    width: 100%;
+    height: helf(107px);
+    background-size: helf(557px) auto;
+    @include bgimg;
+
+    @media (min-width: $breakM) {
+      width: 557px;
+      height: 107px;
+      background-size: auto;
+    }
+
+  }
+}
+
+
+.date-sec {
+
+  & > .date {
+    margin: helf(58px) auto;
+    background-image: url('/img/main_date.png');
+    background-repeat: no-repeat;
+    background-position: center 0;
+    width: 100%;
+    height: helf(301px);
+    background-size: helf(600px) auto;
+    @include bgimg;
+
+    @media (min-width: $breakM) {
+      margin-top: 58px;
+      width: 600px;
+      height: 301px;
+      background-size: auto;
+    }
+
+  }
+}
+
+.act-01 {
+  margin: helf(68px) auto 0;
+  width: helf(628px);
+
+  @media (min-width: $breakM) {
+    margin: 78px auto 0;
+    width: 628px;
+  }
+
+  & .ttl {
+    margin: 0 auto;
+    background-image: url('/img/ttl_osaka.png');
+    width: helf(600px);
+    height: helf(86px);
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: 100% auto;
+    @include bgimg;
+    vertical-align: top;
+
+    @media (min-width: $breakM) {
+      width: 600px;
+      height: 86px;
+    }
+  }
+}
+
+.act-02 {
+  margin: helf(58px) auto 0;
+  width: helf(628px);
+
+  @media (min-width: $breakM) {
+    margin: 68px auto 0;
+    width: 628px;
+  }
+
+  & .ttl {
+    margin: 0 auto;
+    background-image: url('/img/ttl_nagoya.png');
+    width: helf(600px);
+    height: helf(87px);
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: 100% auto;
+    @include bgimg;
+    vertical-align: top;
+
+    @media (min-width: $breakM) {
+      width: 600px;
+      height: 87px;
+    }
+  }
+}
+
+.act-03 {
+  margin: helf(58px) auto 0;
+  width: helf(628px);
+
+  @media (min-width: $breakM) {
+    margin: 68px auto 0;
+    width: 628px;
+  }
+
+  & .ttl {
+    margin: 0 auto;
+    background-image: url('/img/ttl_tokyo.png');
+    width: helf(600px);
+    height: helf(89px);
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: auto 100%;
+    @include bgimg;
+    vertical-align: top;
+
+    @media (min-width: $breakM) {
+      width: 600px;
+      height: 89px;
+    }
+  }
+}
+
+.cast-list {
+  margin-top: helf(80px);
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $breakM) {
+    margin-top: 94px;
+  }
+
+  & > div {
+    position: relative;
+    display: flex;
+    width: helf(314px);
+
+    @media (min-width: $breakM) {
+      width: 314px;
+    }
+
+    &:nth-child(3) {
+      margin-top: helf(62px);
+      width: helf(628px);
+
+      @media (min-width: $breakM) {
+        margin-top: 62px;
+        width: 628px;
+      }
+    }
+  }
+
+  & dt {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: helf(-36px);
+    left: 0;
+    z-index: 2;
+
+    @media (min-width: $breakM) {
+      top: -36px;
+    }
+  }
+
+  & dd {
+    margin: 0 helf(14px);
+    text-align: center;
+    font-size: helf(26px);
+    font-weight: bold;
+    width: helf(286px);
+
+    @media (min-width: $breakM) {
+      margin: 0 14px;
+      width: 286px;
+      font-size: 26px;
+    }
+  }
+
+  & dd > a {
+    display: block;
+    position: relative;
+    margin-bottom: 12px;
+
+    &:after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      content: '';
+      display: inline-block;
+      width: helf(99px);
+      height: helf(99px);
+      background: url('/img/ico_tw.png') no-repeat 0 0;
+      background-size: contain;
+
+      @media (min-width: $breakM) {
+        width: 99px;
+        height: 99px;
+      }
+    }
+  }
+
+  & dd img {
+    width: 100%;
+    vertical-align: top;
+  }
+
+  & dd > i {
+    display: block;
+    text-align: center;
+    font-size: helf(20px);
+    font-style: normal;
+
+    @media (min-width: $breakM) {
+      font-size: 20px;
+    }
+  }
+}
+
+.ttl-band {
+  background-image: url('/img/txt_band.png');
+  width: helf(286px);
+  height: helf(44px);
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: auto 100%;
+  @include bgimg;
+  vertical-align: top;
+
+  @media (min-width: $breakM) {
+    width: 286px;
+    height: 44px;
+  }
+
+}
+
+.ttl-dj {
+  background-image: url('/img/txt_dj.png');
+  width: helf(286px);
+  height: helf(45px);
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: auto 100%;
+  @include bgimg;
+  vertical-align: top;
+
+  @media (min-width: $breakM) {
+    width: 286px;
+    height: 45px;
+  }
+
+}
+
+.ttl-dance {
+  background-image: url('/img/txt_dance.png');
+  width: helf(314px);
+  height: helf(46px);
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: auto 100%;
+  @include bgimg;
+  vertical-align: top;
+
+  @media (min-width: $breakM) {
+    width: 314px;
+    height: 46px;
+  }
+}
+
+.goods-sec {
+  margin-top: helf(496px);
+  padding: helf(100px) 0;
+  width: 100%;
+  background-color: #1e0171;
+
+  @media (min-width: $breakM) {
+    margin-top: 508px;
+    padding: 100px 0;
+  }
+
+  & > .ttl {
+    margin: 0 auto;
+    background-image: url('/img/ttl_goods.png');
+    width: helf(276px);
+    height: helf(57px);
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: helf(276px) auto;
+    @include bgimg;
+    vertical-align: top;
+
+    @media (min-width: $breakM) {
+      width: 276px;
+      height: 57px;
+      background-size: auto 100%;
+    }
+  }
+
+  & > .btn {
+    margin-top: helf(44px);
+    text-align: center;
+
+    @media (min-width: $breakM) {
+      margin-top: 44px;
+    }
+
+    a {
+      display: inline-block;
+      background-image: url('/img/btn_goods.png');
+      width: helf(320px);
+      height: helf(80px);
+      background-repeat: no-repeat;
+      background-position: center 0;
+      background-size: helf(320px) auto;
+      @include bgimg;
+      vertical-align: top;
+
+      @media (min-width: $breakM) {
+        width: 320px;
+        height: 80px;
+        background-size: auto 100%;
+      }
+    }
+  }
+}
+
+.item-list {
+  margin: helf(10px) auto 0;
+  width: helf(628px);
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $breakM) {
+    margin-top: 10px;
+    width: 628px;
+  }
+
+  & > li {
+    padding-bottom: 2em;
+    position: relative;
+    margin: helf(40px) helf(14px) 0;
+    width: helf(286px);
+    text-align: center;
+
+    @media (min-width: $breakM) {
+      padding-bottom: 45px;
+      margin: 40px 14px 0;
+      width: 286px;
+    }
+
+    &.op {
+      padding-bottom: 2em;
+
+      @media (min-width: $breakM) {
+        padding-bottom: 45px;
+      }
+    }
+
+    & > img {
+      width: 100%;
+    }
+  }
+
+  & .name {
+    margin-top: .3em;
+    font-size: helf(24px);
+    line-height: 1.2;
+    font-weight: bold;
+
+    @media (min-width: $breakM) {
+      font-size: 24px;
+    }
+  }
+
+  & .more {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  & .option {
+    font-size: helf(20px);
+
+    @media (min-width: $breakM) {
+      font-size: 20px;
+    }
+  }
+
+  & .price {
+    font-size: helf(24px);
+    color: #ffcc33;
+    line-height: 1.3;
+    font-weight: bold;
+
+    @media (min-width: $breakM) {
+      font-size: 24px;
+      line-height: 1.1;
+    }
+
+    & > i {
+      font-size: helf(20px);
+      font-style: normal;
+
+      @media (min-width: $breakM) {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.info-sec {
+  padding: helf(100px) 0;
+  background-color: #fff;
+
+  @media (min-width: $breakM) {
+    padding: 100px 0;
+  }
+
+  & > .ttl1 {
+    margin: 0 auto;
+    background-image: url('/img/ttl_access.png');
+    width: helf(271px);
+    height: helf(56px);
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: helf(271px) auto;
+    @include bgimg;
+    vertical-align: top;
+
+    @media (min-width: $breakM) {
+      width: 600px;
+      height: 56px;
+      background-size: auto 100%;
+    }
+  }
+
+  & > .ttl2 {
+    margin: helf(90px) auto 0;
+    background-image: url('/img/ttl_twitter.png');
+    width: helf(308px);
+    height: helf(53px);
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: helf(308px) auto;
+    @include bgimg;
+    vertical-align: top;
+
+    @media (min-width: $breakM) {
+      margin-top: 90px;
+      width: 600px;
+      height: 53px;
+      background-size: auto 100%;
+    }
+  }
+}
+
+.info-sec2 {
+  padding: helf(108px) 0;
+  background-color: #fff;
+
+  @media (min-width: $breakM) {
+    padding: 108px 0;
+  }
+
+  & > .ttl2 {
+    margin: 0 auto;
+    background-image: url('/img/ttl_twitter.png');
+    width: helf(308px);
+    height: helf(53px);
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: helf(308px) auto;
+    @include bgimg;
+    vertical-align: top;
+
+    @media (min-width: $breakM) {
+      width: 600px;
+      height: 53px;
+      background-size: auto 100%;
+    }
+  }
+
+  .bkbtn {
+    margin-top: helf(60px);
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: $breakM) {
+      margin-top: 60px;
+    }
+  }
+}
+
+.btn-bkindex {
+  background-image: url('/img/btn_bktop.png');
+  width: helf(320px);
+  height: helf(80px);
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: helf(320px) auto;
+  display: inline-block;
+  @include bgimg;
+  vertical-align: top;
+
+  @media (min-width: $breakM) {
+    width: 320px;
+    height: 80px;
+    background-size: auto 100%;
+  }
+}
+
+.map-list {
+  margin: helf(48px) auto 0;
+  width: helf(600px);
+  color: #1e0171;
+  font-size: helf(22px);
+
+  @media (min-width: $breakM) {
+    margin-top: 48px;
+    width: 600px;
+    font-size: 22px;
+  }
+
+  & > div {
+    margin-top: helf(34px);
+    @media (min-width: $breakM) {
+      margin-top: 34px;
+    }
+  }
+
+  & dt {
+    width: 100%;
+    height: helf(60px);
+    background-color: #1e0171;
+    background-position: center center;
+    background-repeat: no-repeat;
+    @include bgimg;
+    vertical-align: top;
+
+    @media (min-width: $breakM) {
+      height: 60px;
+    }
+  }
+
+  & > .osaka dt {
+    background-image: url('/img/map_osaka.png');
+    background-size: helf(147px) helf(30px);
+
+    @media (min-width: $breakM) {
+      background-size: 147px 30px;
+    }
+  }
+
+  & > .nagoya dt {
+    background-image: url('/img/map_nagoya.png');
+    background-size: helf(180px) helf(30px);
+
+    @media (min-width: $breakM) {
+      background-size: 180px 30px;
+    }
+  }
+
+  & > .tokyo dt {
+    background-image: url('/img/map_tokyo.png');
+    background-size: helf(142px) helf(30px);
+
+    @media (min-width: $breakM) {
+      background-size: 142px 30px;
+    }
+  }
+
+  & dd {
+    text-align: center;
+  }
+
+  & .map {
+    height: helf(350px);
+
+    @media (min-width: $breakM) {
+      height: 338px;
+    }
+  }
+
+  & .name {
+    margin-top: .5em;
+    font-size: helf(26px);
+    font-weight: bold;
+
+    @media (min-width: $breakM) {
+      font-size: 26px;
+    }
+  }
+
+  & .add {
+    margin-top: .2em;
+    line-height: 1.4;
+  }
+}
+
+
+.sub-head {
+  background: url('/img/bg_subhead.jpg') no-repeat center 0;
+  background-size: auto 100%;
+  width: 100%;
+  height: helf(296px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: $breakM) {
+    height: 296px;
+  }
+}
+
+.sub-logo {
+  background-image: url('/img/logo_sub.png');
+  width: helf(469px);
+  height: helf(172px);
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: helf(469px) auto;
+  display: inline-block;
+  @include bgimg;
+  vertical-align: top;
+
+  @media (min-width: $breakM) {
+    width: 469px;
+    height: 172px;
+    background-size: auto 100%;
+  }
+}
+
+.goods-sec2 {
+  padding: helf(330px) 0 helf(94px);
+  background: url('/img/bg_goodschar.png') no-repeat center 0 #1e0171;
+  background-size: helf(776px) helf(318px);
+
+  @media (min-width: $breakM) {
+    padding: 330px 0 94px;
+    background-size: 776px 318px;
+  }
+
+  > .ttl1 {
+    width: 0;
+    height: 0;
+    color: transparent;
+  }
+
+  > .txt1 {
+    margin: 0 auto;
+    width: helf(600px);
+    font-size: helf(24px);
+    line-height: 1.3;
+
+    @media (min-width: $breakM) {
+      width: 600px;
+      font-size: 24px;
+    }
+  }
+
+  > .btn1 {
+    margin: helf(50px) 0 helf(20px);
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: $breakM) {
+      margin: 50px 0 20px;
+    }
+  }
+
+  & > .bnr-list {
+    margin: helf(60px) auto 0;
+    width: helf(600px);
+
+    @media (min-width: $breakM) {
+      margin-top: 60px;
+      width: 600px;
+    }
+
+    li {
+      margin-top: 30px;
+      @media (min-width: $breakM) {
+        margin-top: 60px;
+      }
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.ordeinfo_sec {
+  padding: helf(100px) 0;
+  // min-height: helf(1636px);
+  background: url('/img/bg_order.jpg') no-repeat center bottom #000;
+  background-size: helf(2560px) auto;
+
+  @media (min-width: $breakM) {
+    padding: 100px 0;
+    // min-height: 1637px;
+    background-size: 2560px auto;
+  }
+
+  .ttl1 {
+    margin: 0 auto;
+    background-image: url('/img/txt_order.png');
+    width: helf(202px);
+    height: helf(36px);
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: helf(202px) auto;
+    @include bgimg;
+    vertical-align: top;
+
+    @media (min-width: $breakM) {
+      width: 202px;
+      height: 36px;
+      background-size: auto 100%;
+    }
+  }
+
+  .txt1 {
+    margin: helf(50px) auto 0;
+    width: helf(600px);
+    font-size: helf(24px);
+    line-height: 1.3;
+
+    @media (min-width: $breakM) {
+      margin-top: 50px;
+      width: 600px;
+      font-size: 24px;
+    }
+  }
+
+  .note {
+    margin: helf(40px) auto 0;
+    background-image: url('/img/bg_order2.png');
+    width: helf(640px);
+    height: helf(170px);
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: helf(640px) auto;
+    @include bgimg;
+    vertical-align: top;
+
+    @media (min-width: $breakM) {
+      margin: 40px auto 0;
+      width: 640px;
+      height: 170px;
+      background-size: auto 100%;
+    }
+  }
+
+  .btn1 {
+    margin-top: helf(40px);
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: $breakM) {
+      margin-top: 40px;
+    }
+  }
+}
+
+.order-flow {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: helf(628px);
+
+  @media (min-width: $breakM) {
+    width: 628px;
+  }
+
+  > li {
+    margin: helf(48px) helf(14px) 0;
+    width: helf(286px);
+
+    @media (min-width: $breakM) {
+      margin: 48px 14px 0;
+      width: 286px;
+    }
+  }
+
+  figure {
+    img {
+      width: 100%;
+      vertical-align: top;
+    }
+  }
+
+  .txt {
+    margin-top: helf(12px);
+    font-size: helf(22px);
+    line-height: 1.45;
+
+    @media (min-width: $breakM) {
+      margin-top: 12px;
+      font-size: 22px;
+    }
+  }
+}
+
+.btn-sheet {
+  background-image: url('/img/btn_sheet.png');
+  width: helf(400px);
+  height: helf(96px);
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: helf(400px) auto;
+  display: inline-block;
+  @include bgimg;
+  vertical-align: top;
+
+  @media (min-width: $breakM) {
+    width: 400px;
+    height: 96px;
+    background-size: auto 100%;
+  }
+}
+
+.tw-widget {
+  position: relative;
+  margin: helf(54px) auto 0;
+  // padding: helf(14px);
+  width: helf(600px);
+  height: helf(662px);
+  border: solid 7px #1e0171;
+  overflow: hidden;
+  box-sizing: border-box;
+  vertical-align: top;
+  @media (min-width: $breakM) {
+    margin: 54px auto 0;
+    // padding: 14px;
+    width: 572px;
+    height: 662px;
+    border-width: 14px;
+  }
+  iframe {
+    width: 300px !important;
+    height: 320px !important;
+    background-color: #fff;
+    @media (min-width: $breakM) {
+      width: 572px !important;
+      height: 630px !important;
+    }
+  }
+}
+
+.notice-sec {
+  padding: helf(80px) 0;
+  color: #8c84bb;
+  font-size: helf(20px);
+  line-height: 1.5;
+  background-color: #1e0171;
+
+  @media (min-width: $breakM) {
+    padding: 80px 0;
+    font-size: 20px;
+  }
+
+  & > .ttl {
+    text-align: center;
+    color: #fff;
+    font-size: helf(24px);
+
+    @media (min-width: $breakM) {
+      font-size: 24px;
+    }
+  }
+}
+
+.notice-list {
+  margin: helf(26px) auto 0;
+  width: helf(600px);
+
+  @media (min-width: $breakM) {
+    margin: 26px auto 0;
+    width: 600px;
+  }
+
+  & > .block {
+    margin-top: helf(20px);
+
+    @media (min-width: $breakM) {
+      margin-top: 20px;
+    }
+  }
+
+  & dt {
+    padding: 0 helf(20px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    font-size: helf(20px);
+    width: 100%;
+    height: helf(70px);
+    background-color: #110042;
+    cursor: pointer;
+
+    @media (min-width: $breakM) {
+      padding: 0 20px;
+      font-size: 20px;
+      height: 50px;
+    }
+
+    & > i {
+      position: relative;
+      display: block;
+      width: helf(20px);
+      height: helf(20px);
+
+      @media (min-width: $breakM) {
+        width: 20px;
+        height: 20px;
+      }
+
+      &:before {
+        margin-top: -1px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        display: block;
+      }
+
+      &:after {
+        margin-left: -1px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        content: '';
+        width: 2px;
+        height: 100%;
+        background-color: #fff;
+        display: block;
+      }
+
+      &.open:after {
+        display: none;
+      }
+    }
+  }
+
+  & dd {
+    padding: helf(15px) 0 helf(2px);
+
+    @media (min-width: $breakM) {
+      padding: 15px 0 2px;
+    }
+  }
+
+  & li {
+    margin: 0 0 helf(8px) 1em;
+    text-indent: -1em;
+    line-height: 1.4;
+    padding-right: .5em;
+
+    @media (min-width: $breakM) {
+      margin-bottom: 8px;
+    }
+
+    &:before {
+      content: '・';
+    }
+  }
+}
+
+
+.entry-bar {
+  // padding-bottom: 80px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-top: solid 2px #ff3e8e;
+  height: helf(220px);
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  display: flex;
+  flex-wrap: wrap;
+  opacity: 0;
+  z-index: 10;
+  padding-bottom: 1em;
+
+  @media (min-width: $breakM) {
+    padding: 0 35vw 10px;
+    height: 125px;
+  }
+
+  & > .btn {
+    display: block;
+    background-image: url('/img/btn_ticket.png');
+    background-repeat: no-repeat;
+    background-position: center 0;
+    width: 100%;
+    height: helf(138px);
+    background-size: helf(440px) auto;
+    @include bgimg;
+
+    @media (min-width: $breakM) {
+      width: 220px;
+      height: 69px;
+      background-size: 220px auto;
+    }
+  }
+}
+
+.css-fade1{
+  // アニメーション設�?
+  animation-name:fade-in1;
+  animation-duration:.2s; //アニメーション時間
+  animation-timing-function: ease-out; //アニメーションさせるイージング
+  // animation-delay:1s; //アニメーション開始させる時間
+  animation-iteration-count:1; //繰り返し回数
+  animation-direction:normal; //往復処をするかど�?�?
+  animation-fill-mode: forwards; //アニメーション後�?�スタイルをど�?する�?
+}
+@keyframes fade-in1 {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+.social-sec {
+  padding: helf(80px) 0 helf(70px);
+  background-color: #262e3c;
+
+  @media (min-width: $breakM) {
+    padding: 80px 0 100px;
+  }
+
+  & > .ttl {
+    display: block;
+    background-image: url('/img/ttl_share.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: helf(26px);
+    background-size: helf(113px) auto;
+    @include bgimg;
+
+    @media (min-width: $breakM) {
+      height: 26px;
+      background-size: 113px auto;
+    }
+  }
+
+  & > .snsBtns {
+    margin: helf(36px) 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media (min-width: $breakM) {
+      margin-top: 36px;
+    }
+
+    & > li {
+      margin: 0 helf(18px);
+
+      @media (min-width: $breakM) {
+        margin: 0 18px;
+      }
+    }
+  }
+}
+
+.btnFb {
+  display: block;
+  background-image: url('/img/btn_fb.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: helf(118px);
+  height: helf(118px);
+  background-size: helf(29px) auto;
+  background-color: #14222e;
+  @include bgimg;
+  border-radius: 50%;
+
+  @media (min-width: $breakM) {
+    width: 118px;
+    height: 118px;
+    background-size: 29px 72px;
+  }
+}
+
+.btnTw {
+  display: block;
+  background-image: url('/img/btn_twt.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: helf(118px);
+  height: helf(118px);
+  background-size: helf(66px) auto;
+  background-color: #14222e;
+  @include bgimg;
+  border-radius: 50%;
+
+  @media (min-width: $breakM) {
+    width: 118px;
+    height: 118px;
+    background-size: 66px 54px;
+  }
+}
+
+.cmps-footer {
+  padding-bottom: helf(28px);
+  background-image: url('http://s.nhn-playart.com/smartgame/spn/games/compass/component_footer/img/sp/bg.jpg');
+  background-repeat: repeat-x;
+  background-position: center top helf(160px);
+  background-color: #262e3c;
+  background-size: 800px auto;
+
+  @media (min-width: $breakM) {
+    background-image: url('https://s.nhn-playart.com/smartgame/spn/games/compass/component_footer/img/pc/bg.jpg');
+    padding-bottom: 42px;
+    background-size: 2000px auto;
+    background-position: center top 112px;
+  }
+
+  .official {
+    display: flex;
+    justify-content: center;
+  }
+
+  .others {
+    margin-top: helf(90px);
+
+    @media (min-width: $breakM) {
+      margin-top: 90px;
+    }
+
+    .list {
+
+      @media (min-width: $breakM) {
+        display: flex;
+        justify-content: center;
+      }
+
+      li {
+        margin-bottom: 17px;
+        text-align: center;
+
+        @media (min-width: $breakM) {
+          margin:  0 15px 0;
+        }
+      }
+    }
+  }
+
+  // .copyright {
+  //   margin-top: helf(100px);
+  //   text-align: center;
+  //   font-size: helf(30px);
+
+  //   @media (min-width: $breakM) {
+  //     margin-top: 43px;
+  //     font-size: 21px;
+  //   }
+
+  //   a {
+  //     color: #fff;
+  //   }
+  // }
+
+  // .logo, .text {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   font-size: helf(20px);
+
+  //   @media (min-width: $breakM) {
+  //     font-size: 14px;
+  //   }
+
+  //   li {
+  //     margin: 0 helf(16px);
+
+  //     @media (min-width: $breakM) {
+  //       margin: 0 17px;
+  //     }
+  //   }
+  // }
+
+  // .logo {
+  //   margin: helf(35px) 0 1em;
+
+  //   @media (min-width: $breakM) {
+  //     margin-top: 35px;
+  //   }
+  // }
+
+  .copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: helf(60px);
+    @media (min-width: $breakM) {
+      padding-bottom: 40px;
+    }
+
+    .mainTtl {
+      text-align: center;
+      margin: helf(60px) auto helf(40px);
+      text-align: center;
+      @media (min-width: $breakM) {
+        margin: 40px auto;
+      }
+      a {
+        color: #636A72;
+        text-decoration: none;
+        font-size: helf(22px);
+        @media (min-width: $breakM) {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      // @media (min-width: $breakM) {
+      // }
+      li {
+        margin: 0 helf(19px) helf(20px);
+        @media (min-width: $breakM) {
+          margin: 0 20px 20px;
+        }
+      }
+    }
+
+    .logo_pa {
+      display: block;
+      background: url('//s.nhn-playart.com/nhn_playart/common/img/logo_S_PA_w_all.svg') 0 bottom no-repeat;
+      background-size: auto 100%;
+      width: helf(143px);
+      height: helf(45px);
+      @include bgimg;
+
+      @media (min-width: $breakM) {
+        width: 105px;
+        height: 33px;
+      }
+    }
+
+    .logo_nico {
+      display: block;
+      background: url('//s.nhn-playart.com/smartgame/spn/games/compass/official/img/common/logo_niconico.svg') 0 bottom no-repeat;
+      background-size: auto helf(30px);
+      width: helf(146px);
+      height: helf(45px);
+      @include bgimg;
+
+      @media (min-width: $breakM) {
+        width: 116px;
+        height: 33px;
+        background-size: auto 24px;
+      }
+    }
+
+    .text {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: helf(336px);
+      height: helf(30px);
+      @media (min-width: $breakM) {
+        width: 261px;
+        height: 30px;
+      }
+
+      small {
+        font-size: helf(16px);
+        color: #fff;
+        @media (min-width: $breakM) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+.btn_official {
+  display: inline-block;
+  background-image: url('https://s.nhn-playart.com/smartgame/spn/games/compass/component_footer/img/sp/btn_official.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: helf(550px);
+  height: helf(118px);
+  background-size: helf(550px) auto;
+  @include bgimg;
+  vertical-align: top;
+
+  @media (min-width: $breakM) {
+    background-image: url('https://s.nhn-playart.com/smartgame/spn/games/compass/component_footer/img/pc/btn_official.png');
+    width: 248px;
+    height: 72px;
+    background-size: contain;
+  }
+}
+
+.btn_mart {
+  display: inline-block;
+  background-image: url('https://s.nhn-playart.com/smartgame/spn/games/compass/component_footer/img/sp/btn_mart.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: helf(550px);
+  height: helf(118px);
+  background-size: helf(550px) auto;
+  @include bgimg;
+  vertical-align: top;
+
+  @media (min-width: $breakM) {
+    background-image: url('https://s.nhn-playart.com/smartgame/spn/games/compass/component_footer/img/pc/btn_mart.png');
+    width: 248px;
+    height: 72px;
+    background-size: contain;
+  }
+}
+
+.btn_sponavi {
+  display: inline-block;
+  background-image: url('https://s.nhn-playart.com/smartgame/spn/games/compass/component_footer/img/sp/btn_sponavi.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: helf(550px);
+  height: helf(118px);
+  background-size: helf(550px) auto;
+  @include bgimg;
+  vertical-align: top;
+
+  @media (min-width: $breakM) {
+    background-image: url('https://s.nhn-playart.com/smartgame/spn/games/compass/component_footer/img/pc/btn_sponavi.png');
+    width: 248px;
+    height: 72px;
+    background-size: contain;
+  }
+}
+
+.btn_niconico {
+  display: inline-block;
+  background-image: url('https://s.nhn-playart.com/smartgame/spn/games/compass/component_footer/img/sp/btn_niconico.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: helf(550px);
+  height: helf(118px);
+  background-size: helf(550px) auto;
+  @include bgimg;
+  vertical-align: top;
+
+  @media (min-width: $breakM) {
+    background-image: url('https://s.nhn-playart.com/smartgame/spn/games/compass/component_footer/img/pc/btn_niconico.png');
+    width: 248px;
+    height: 72px;
+    background-size: contain;
+  }
+}
+
+
+
+.btn-gotop {
+  margin: 0 auto helf(60px);
+  width: helf(38px);
+  height: helf(38px);
+  display: block;
+  border-top: solid helf(6px) #fff;
+  border-right: solid helf(6px) #fff;
+  font-size: 0;
+  color: transparent;
+  transform: rotate(-45deg);
+
+  @media (min-width: $breakM) {
+    margin-bottom: 60px;
+    width: 28px;
+    height: 28px;
+    border-width: 6px;
+  }
+}
+
+
+
+
+.layer-text {
+  z-index: 1000;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgba(27,27,63,.9);
+
+  &.-show {
+    display: flex;
+  }
+
+  & > .frame > .text {
+    border: solid 2px #fc438e;
+    background-color: #2e3192;
+    padding: 1.5em;
+
+    width: 90vw;
+    height: 50vh;
+
+    overflow-y: scroll;
+
+    @media (min-width: $breakM) {
+      width: 640px;
+      height: 70vh;
+    }
+  }
+
+  & > .frame > .btn {
+    margin-top: 1em;
+    text-align: center;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: underline;
+  }
+}

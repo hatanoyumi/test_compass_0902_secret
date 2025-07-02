@@ -1,0 +1,37 @@
+@use "sass:math" as math; // 画像サイズ計算用
+
+@function rate($size, $rate){
+  $return: math.div($size, $rate) * 100vw;
+  @return math.round($return);
+}
+
+@function helf($size){
+  $return: math.div($size, 2);
+  @return math.round($return);
+}
+
+@mixin r-prop_rate($prop, $sizeS, $sizeM, $sizeL) {
+  #{$prop}: rate($sizeS, $rateS);
+  @media (min-width: $breakM) {
+    #{$prop}: rate($sizeM, $rateM);
+  }
+  @media (min-width: $breakL) {
+    #{$prop}: $sizeL;
+  }
+}
+
+@mixin r-prop($prop, $sizeS, $sizeM, $sizeL) {
+  #{$prop}: $sizeS;
+  @media (min-width: $breakM) {
+    #{$prop}: $sizeM;
+  }
+  @media (min-width: $breakL) {
+    #{$prop}: $sizeL;
+  }
+}
+
+@mixin bgimg {
+  font-size: 0;
+  color: transparent;
+  overflow: hidden;
+}

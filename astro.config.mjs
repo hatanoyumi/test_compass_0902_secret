@@ -4,7 +4,7 @@ import { defineConfig } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://test-compass-2.netlify.app/',
-  // base: '/astro/test_compass_0902_secret/',
+  // base: 'https://test-compass-2.netlify.app/',
   build: {
     format: 'preserve'
   },

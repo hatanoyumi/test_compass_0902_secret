@@ -3,6 +3,11 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://test-compass-2.netlify.app/',
+  // base: '/astro/test_compass_0902_secret/',
+  build: {
+    format: 'preserve'
+  },
   vite: {
     css: {
       preprocessorOptions: {

@@ -1,13 +1,15 @@
-// @ts-check
-import { defineConfig } from 'astro/config';
 
+import { fileURLToPath } from 'node:url'
+import { defineConfig } from 'astro/config';
 import relativeLinks from 'astro-relative-links';
+
+const isProd = import.meta.env.PROD;
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://test-compass-2.netlify.app/',
-
   // base: 'https://test-compass-2.netlify.app/',
+
   build: {
     format: 'preserve', // これを使うと、astro buildでファイル名が.astroファイルと同じになる
     assetsPrefix: 'https://test-compass-2.netlify.app/'
@@ -35,8 +37,28 @@ export default defineConfig({
     build: {
       rollupOptions: {
         output: {
-          assetFileNames: "[ext]/[name][extname]",// cssの名前をわかりやすく
+          assetFileNames: assetInfo => {
+            const fileName = assetInfo?.names;
+            if (fileName && Array.isArray(fileName)) {
+              const extType = fileName[0].split('.').at(-1);
+              if (extType === 'css') {
+                return 'css/[name][extname]';
+              }
+            }
+            return `assets/[name][extname]`;
+          },
         },
+        // output: {
+        //   assetFileNames: "[ext]/[name][extname]",// cssの名前をわかりやすく
+        // },
+      },
+    },
+    resolve: {
+      alias: {
+        ...(isProd
+          ? { '@/img': fileURLToPath(new URL('./public/img', import.meta.url)) }
+          : { '@/img': fileURLToPath(new URL('./img', import.meta.url)) }
+        )
       },
     },
   },

@@ -86,7 +86,7 @@ body {
   }
 
   &.index {
-    background-image: url('/img/bg0913_1.jpg'), url('/img/bg0913_2.jpg'), url('/img/bg0913_3.jpg'), url('/img/bg0913_4.jpg');
+    background-image: url('@/img/bg0913_1.jpg'), url('@/img/bg0913_2.jpg'), url('@/img/bg0913_3.jpg'), url('@/img/bg0913_4.jpg');
     background-repeat: no-repeat;
     background-position: center 0, center helf(1520px), center helf(1520px + 1368px), center helf(1520px + 1368px + 1100px);
     background-size: helf(2560px) auto;
@@ -136,7 +136,7 @@ main {
 
   & > .msg {
     margin: 0 auto;
-    background-image: url('/img/main_msg.png');
+    background-image: url('@/img/main_msg.png');
     background-repeat: no-repeat;
     background-position: center 0;
     width: 100%;
@@ -158,7 +158,7 @@ main {
 
   & > .date {
     margin: helf(58px) auto;
-    background-image: url('/img/main_date.png');
+    background-image: url('@/img/main_date.png');
     background-repeat: no-repeat;
     background-position: center 0;
     width: 100%;
@@ -187,7 +187,7 @@ main {
 
   & .ttl {
     margin: 0 auto;
-    background-image: url('/img/ttl_osaka.png');
+    background-image: url('@/img/ttl_osaka.png');
     width: helf(600px);
     height: helf(86px);
     background-repeat: no-repeat;
@@ -214,7 +214,7 @@ main {
 
   & .ttl {
     margin: 0 auto;
-    background-image: url('/img/ttl_nagoya.png');
+    background-image: url('@/img/ttl_nagoya.png');
     width: helf(600px);
     height: helf(87px);
     background-repeat: no-repeat;
@@ -241,7 +241,7 @@ main {
 
   & .ttl {
     margin: 0 auto;
-    background-image: url('/img/ttl_tokyo.png');
+    background-image: url('@/img/ttl_tokyo.png');
     width: helf(600px);
     height: helf(89px);
     background-repeat: no-repeat;
@@ -326,7 +326,7 @@ main {
       display: inline-block;
       width: helf(99px);
       height: helf(99px);
-      background: url('/img/ico_tw.png') no-repeat 0 0;
+      background: url('@/img/ico_tw.png') no-repeat 0 0;
       background-size: contain;
 
       @media (min-width: $breakM) {
@@ -354,7 +354,7 @@ main {
 }
 
 .ttl-band {
-  background-image: url('/img/txt_band.png');
+  background-image: url('@/img/txt_band.png');
   width: helf(286px);
   height: helf(44px);
   background-repeat: no-repeat;
@@ -371,7 +371,7 @@ main {
 }
 
 .ttl-dj {
-  background-image: url('/img/txt_dj.png');
+  background-image: url('@/img/txt_dj.png');
   width: helf(286px);
   height: helf(45px);
   background-repeat: no-repeat;
@@ -388,7 +388,7 @@ main {
 }
 
 .ttl-dance {
-  background-image: url('/img/txt_dance.png');
+  background-image: url('@/img/txt_dance.png');
   width: helf(314px);
   height: helf(46px);
   background-repeat: no-repeat;
@@ -416,7 +416,7 @@ main {
 
   & > .ttl {
     margin: 0 auto;
-    background-image: url('/img/ttl_goods.png');
+    background-image: url('@/img/ttl_goods.png');
     width: helf(276px);
     height: helf(57px);
     background-repeat: no-repeat;
@@ -442,7 +442,7 @@ main {
 
     a {
       display: inline-block;
-      background-image: url('/img/btn_goods.png');
+      background-image: url('@/img/btn_goods.png');
       width: helf(320px);
       height: helf(80px);
       background-repeat: no-repeat;
@@ -555,7 +555,7 @@ main {
 
   & > .ttl1 {
     margin: 0 auto;
-    background-image: url('/img/ttl_access.png');
+    background-image: url('@/img/ttl_access.png');
     width: helf(271px);
     height: helf(56px);
     background-repeat: no-repeat;
@@ -573,7 +573,7 @@ main {
 
   & > .ttl2 {
     margin: helf(90px) auto 0;
-    background-image: url('/img/ttl_twitter.png');
+    background-image: url('@/img/ttl_twitter.png');
     width: helf(308px);
     height: helf(53px);
     background-repeat: no-repeat;
@@ -601,7 +601,7 @@ main {
 
   & > .ttl2 {
     margin: 0 auto;
-    background-image: url('/img/ttl_twitter.png');
+    background-image: url('@/img/ttl_twitter.png');
     width: helf(308px);
     height: helf(53px);
     background-repeat: no-repeat;
@@ -629,7 +629,7 @@ main {
 }
 
 .btn-bkindex {
-  background-image: url('/img/btn_bktop.png');
+  background-image: url('@/img/btn_bktop.png');
   width: helf(320px);
   height: helf(80px);
   background-repeat: no-repeat;
@@ -680,7 +680,7 @@ main {
   }
 
   & > .osaka dt {
-    background-image: url('/img/map_osaka.png');
+    background-image: url('@/img/map_osaka.png');
     background-size: helf(147px) helf(30px);
 
     @media (min-width: $breakM) {
@@ -689,7 +689,7 @@ main {
   }
 
   & > .nagoya dt {
-    background-image: url('/img/map_nagoya.png');
+    background-image: url('@/img/map_nagoya.png');
     background-size: helf(180px) helf(30px);
 
     @media (min-width: $breakM) {
@@ -698,7 +698,7 @@ main {
   }
 
   & > .tokyo dt {
-    background-image: url('/img/map_tokyo.png');
+    background-image: url('@/img/map_tokyo.png');
     background-size: helf(142px) helf(30px);
 
     @media (min-width: $breakM) {
@@ -736,7 +736,7 @@ main {
 
 
 .sub-head {
-  background: url('/img/bg_subhead.jpg') no-repeat center 0;
+  background: url('@/img/bg_subhead.jpg') no-repeat center 0;
   background-size: auto 100%;
   width: 100%;
   height: helf(296px);
@@ -750,7 +750,7 @@ main {
 }
 
 .sub-logo {
-  background-image: url('/img/logo_sub.png');
+  background-image: url('@/img/logo_sub.png');
   width: helf(469px);
   height: helf(172px);
   background-repeat: no-repeat;
@@ -769,7 +769,7 @@ main {
 
 .goods-sec2 {
   padding: helf(330px) 0 helf(94px);
-  background: url('/img/bg_goodschar.png') no-repeat center 0 #1e0171;
+  background: url('@/img/bg_goodschar.png') no-repeat center 0 #1e0171;
   background-size: helf(776px) helf(318px);
 
   @media (min-width: $breakM) {
@@ -833,7 +833,7 @@ main {
 .ordeinfo_sec {
   padding: helf(100px) 0;
   // min-height: helf(1636px);
-  background: url('/img/bg_order.jpg') no-repeat center bottom #000;
+  background: url('@/img/bg_order.jpg') no-repeat center bottom #000;
   background-size: helf(2560px) auto;
 
   @media (min-width: $breakM) {
@@ -844,7 +844,7 @@ main {
 
   .ttl1 {
     margin: 0 auto;
-    background-image: url('/img/txt_order.png');
+    background-image: url('@/img/txt_order.png');
     width: helf(202px);
     height: helf(36px);
     background-repeat: no-repeat;
@@ -875,7 +875,7 @@ main {
 
   .note {
     margin: helf(40px) auto 0;
-    background-image: url('/img/bg_order2.png');
+    background-image: url('@/img/bg_order2.png');
     width: helf(640px);
     height: helf(170px);
     background-repeat: no-repeat;
@@ -944,7 +944,7 @@ main {
 }
 
 .btn-sheet {
-  background-image: url('/img/btn_sheet.png');
+  background-image: url('@/img/btn_sheet.png');
   width: helf(400px);
   height: helf(96px);
   background-repeat: no-repeat;
@@ -1137,7 +1137,7 @@ main {
 
   & > .btn {
     display: block;
-    background-image: url('/img/btn_ticket.png');
+    background-image: url('@/img/btn_ticket.png');
     background-repeat: no-repeat;
     background-position: center 0;
     width: 100%;
@@ -1178,7 +1178,7 @@ main {
 
   & > .ttl {
     display: block;
-    background-image: url('/img/ttl_share.png');
+    background-image: url('@/img/ttl_share.png');
     background-repeat: no-repeat;
     background-position: center center;
     width: 100%;
@@ -1214,7 +1214,7 @@ main {
 
 .btnFb {
   display: block;
-  background-image: url('/img/btn_fb.png');
+  background-image: url('@/img/btn_fb.png');
   background-repeat: no-repeat;
   background-position: center center;
   width: helf(118px);
@@ -1233,7 +1233,7 @@ main {
 
 .btnTw {
   display: block;
-  background-image: url('/img/btn_twt.png');
+  background-image: url('@/img/btn_twt.png');
   background-repeat: no-repeat;
   background-position: center center;
   width: helf(118px);

@@ -1,9 +1,12 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
+import relativeLinks from 'astro-relative-links';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://test-compass-2.netlify.app/',
+
   // base: 'https://test-compass-2.netlify.app/',
   build: {
     format: 'preserve', // これを使うと、astro buildでファイル名が.astroファイルと同じになる
@@ -17,6 +20,7 @@ export default defineConfig({
     //   'fallback': 'https://test-compass-2.netlify.app/etc/'
     // }
   },
+
   vite: {
     css: {
       preprocessorOptions: {
@@ -36,4 +40,6 @@ export default defineConfig({
       },
     },
   },
+
+  integrations: [relativeLinks()],
 });

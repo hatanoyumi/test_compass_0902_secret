@@ -6,14 +6,15 @@ export default defineConfig({
   site: 'https://test-compass-2.netlify.app/',
   // base: 'https://test-compass-2.netlify.app/',
   build: {
-    format: 'preserve', // これを使うと、astro buildでファイル名がわかりやすくなる
-    assetsPrefix: 'https://test-compass-2.netlify.app/' // 画像の格納場所が異なるときなど、相対パスではなく絶対パスにする場合これで指定（jsとimgを分ける方法もある）
+    format: 'preserve', // これを使うと、astro buildでファイル名が.astroファイルと同じになる
+    assetsPrefix: 'https://test-compass-2.netlify.app/'
+    // ↑画像の格納場所が異なるときなど、相対パスではなく絶対パスにする場合これで指定。と思ったけど画像のパス変わらんな！
     //　ファイルタイプごとに異なるドメインの場合（他のすべてのファイルのデフォルトとしてfallbackプロパティを最後につける）
     //  assetsPrefix: {
-    //   'js': 'https://js.cdn.example.com',
-    //   'mjs': 'https://js.cdn.example.com',
-    //   'css': 'https://css.cdn.example.com',
-    //   'fallback': 'https://cdn.example.com'
+    //   'js': 'https://test-compass-2.netlify.app/js/',
+    //   'mjs': 'https://test-compass-2.netlify.app/mjs/',
+    //   'css': 'https://test-compass-2.netlify.app/css/',
+    //   'fallback': 'https://test-compass-2.netlify.app/etc/'
     // }
   },
   vite: {

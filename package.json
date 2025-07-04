@@ -14,6 +14,7 @@
     "astro-relative-links": "^0.4.2"
   },
   "devDependencies": {
+    "astro-compress": "2.3.8",
     "sass-embedded": "^1.89.2"
   }
 }

@@ -3,10 +3,11 @@
 @forward "_reset.scss"; // リセットcss
 // fontはお試しでfontsourceに変更（読み込みが早いらしい？→ビルドするとdistフォルダ内にfontが格納される。だから早い）
 // 注意）npm install @fontsource/noto-sans-jp が必要
-@forward '@fontsource/noto-sans-jp/400.css';
-@forward '@fontsource/noto-sans-jp/500.css';
-@forward '@fontsource/noto-sans-jp/700.css';
-@forward '@fontsource/noto-sans-jp/900.css';
+// @forward '@fontsource/noto-sans-jp/400.css';
+// @forward '@fontsource/noto-sans-jp/500.css';
+// @forward '@fontsource/noto-sans-jp/700.css';
+// @forward '@fontsource/noto-sans-jp/900.css';
+@import url('//fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700,900|Noto+Sans:400,700&subset=japanese');
 
 
 
